@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gifting — SHAURYA</title>
+<meta name="description" content="SHAURYA men's gifts: belt and wallet sets, personalised belts and keychains, premium gift boxes for every occasion.">
+<meta name="theme-color" content="#0b0a08">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="gifting">
+<main>
+  <section class="page-hero" style="padding-bottom:40px">
+    <div class="wrap stack">
+      <span class="eyebrow">The gifting collection</span>
+      <h1 class="h1" data-split>Gifts that carry<br>meaning.</h1>
+      <p class="lede">For birthdays, anniversaries, weddings, Father's Day and corporate gifting. Choose a set, the box, the occasion and your message.</p>
+    </div>
+  </section>
+  <section class="section--tight">
+    <div class="wrap showroom" style="grid-template-columns:300px 1fr 360px">
+      <div class="pick-list" id="gift-products"></div>
+      <div class="stage" id="stage" aria-label="3D gift box"></div>
+      <form class="detail stack" id="gift-form">
+        <div id="gift-info"></div>
+        <div class="field"><span class="label">Gift packaging</span><div class="chips" id="packaging"></div></div>
+        <div class="field"><span class="label">Occasion</span><div class="chips" id="occasion"></div></div>
+        <div class="field" id="gift-personal"><label for="engrave">Engraving (name / initials)</label><input class="input" id="engrave" name="engrave" maxlength="18" placeholder="e.g. PAPA or R.S."></div>
+        <div class="field"><label for="message">Gift message</label><textarea class="textarea" id="message" name="message" maxlength="240" placeholder="Handwritten on our card (240 characters)"></textarea></div>
+        <div class="row"><button class="btn btn--solid" type="submit">Add gift to bag</button><button class="btn" type="submit" data-buy>Buy now</button></div>
+        <p class="form-note">Corporate orders of 10+ pieces: <a class="link" href="support.html#contact">contact us</a> for a quotation.</p>
+      </form>
+    </div>
+  </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/three-kit.js"></script>
+<script src="assets/js/models.js"></script>
+<script src="assets/js/pages.js"></script>
+</body>
+</html>

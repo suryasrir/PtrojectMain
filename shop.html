@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shop All — SHAURYA</title>
+<meta name="description" content="Shop all SHAURYA belts, wallets and gifts.">
+<meta name="theme-color" content="#0b0a08">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700;800&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="shop">
+<main>
+  <section class="page-hero" style="padding-bottom:40px">
+    <div class="wrap stack"><span class="eyebrow">Shop</span><h1 class="h1">All products</h1></div>
+  </section>
+  <section class="section--tight">
+    <div class="wrap">
+      <div class="shop-tools">
+        <label class="sr-only" for="q">Search</label><input class="input" id="q" type="search" placeholder="Search belts, wallets, gifts…">
+        <label class="sr-only" for="cat">Category</label><select class="select" id="cat" style="max-width:200px"><option value="all">All categories</option><option value="belts">Belts</option><option value="wallets">Wallets</option><option value="gifts">Gifts</option></select>
+        <label class="sr-only" for="sort">Sort</label><select class="select" id="sort" style="max-width:200px"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select>
+        <div class="field" style="min-width:200px"><label for="max">Max price: <span id="max-v"></span></label><input id="max" type="range" min="500" max="6000" step="100" value="6000" style="accent-color:var(--gold)"></div>
+        <span class="muted small" id="count"></span>
+      </div>
+      <div class="shop-grid" id="grid"></div>
+    </div>
+  </section>
+</main>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/pages.js"></script>
+</body>
+</html>

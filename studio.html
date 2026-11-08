@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Personalisation Studio — SHAURYA</title>
+<meta name="description" content="Design your own SHAURYA belt: choose leather, buckle finish, engrave your name or upload a logo, and preview it in 3D.">
+<meta name="theme-color" content="#0b0a08">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="studio">
+<main>
+  <section class="page-hero" style="padding-bottom:40px">
+    <div class="wrap stack">
+      <span class="eyebrow">SHAURYA personalisation studio</span>
+      <h1 class="h1" data-split>Your identity.<br>Your design.<br><span class="gold italic">Your SHAURYA.</span></h1>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="wrap studio">
+      <div>
+        <div class="stage" id="stage" aria-label="3D design preview"></div>
+        <div class="notice" style="margin-top:16px"><strong>Preview note:</strong> the 3D preview is an approximation of the finished engraving. All names and artwork are reviewed by our craft team before manufacturing. Not every photograph or uploaded image can be reproduced on metal — we'll contact you if changes are needed.</div>
+      </div>
+
+      <div>
+        <div class="step"><h3>A · Belt model</h3><div class="chips" id="s-model"></div></div>
+        <div class="step"><h3>B · Leather colour &amp; material</h3>
+          <div class="swatches" id="s-color" style="margin-bottom:16px"></div>
+          <div class="chips" id="s-material"></div></div>
+        <div class="step"><h3>C · Buckle finish</h3><div class="chips" id="s-finish"></div></div>
+        <div class="step"><h3>D · Name or initials</h3>
+          <input class="input" id="s-text" maxlength="18" placeholder="e.g. ARJUN or A.K."></div>
+        <div class="step"><h3>E · Typography &amp; engraving style</h3>
+          <div class="chips" id="s-font" style="margin-bottom:14px"></div>
+          <div class="chips" id="s-style"></div></div>
+        <div class="step"><h3>F · Logo, artwork or symbol</h3>
+          <div class="drop" id="s-drop" role="button" tabindex="0">Drop a file here or click to upload<br><span class="small muted">PNG, JPG, WebP, SVG · AI, EPS, PDF accepted for review · max 10 MB</span></div>
+          <input type="file" id="s-logo" accept=".png,.jpg,.jpeg,.webp,.svg,.ai,.eps,.pdf,image/png,image/jpeg,image/webp,image/svg+xml,application/pdf" hidden>
+          <div class="row" style="margin-top:10px;justify-content:space-between"><span class="small muted" id="s-logo-name">No file chosen</span><button class="btn btn--sm btn--ghost" id="s-logo-clear" type="button">Remove</button></div>
+          <p class="form-note">High-contrast, single-colour artwork engraves best. Logo engraving adds ₹500.</p></div>
+        <div class="step"><h3>H · Special instructions</h3><textarea class="textarea" id="s-notes" placeholder="Placement, spacing, anything we should know"></textarea></div>
+
+        <div class="step stack">
+          <h3>Your design</h3>
+          <p class="muted small" id="s-summary"></p>
+          <div class="row" style="justify-content:space-between"><span class="price" id="s-price"></span>
+            <div class="field" style="min-width:140px"><label for="s-size">Waist size</label><select class="select" id="s-size"><option>30</option><option>32</option><option selected>34</option><option>36</option><option>38</option><option>40</option><option>42</option><option>44</option></select></div></div>
+          <label class="check"><input type="checkbox" id="s-ack"> I understand the preview is an approximation and my artwork will be reviewed before production.</label>
+          <div class="row"><button class="btn btn--solid" id="s-order">Submit custom order</button><button class="btn" id="s-save">Save design</button><button class="btn btn--ghost" id="s-reset">Reset</button></div>
+        </div>
+
+        <div class="step"><h3>Saved designs (this device)</h3><div class="saved" id="s-saved"></div></div>
+
+        <div class="step"><h3>G · Request a quotation</h3>
+          <p class="muted small">For bulk, corporate or unusual requests. We'll reply with a quote after reviewing your design.</p>
+          <form id="quote-form" class="form-grid">
+            <div class="field"><label for="q-name">Name</label><input class="input" id="q-name" name="name" required></div>
+            <div class="field"><label for="q-email">Email</label><input class="input" id="q-email" name="email" type="email" required></div>
+            <div class="field"><label for="q-phone">Phone</label><input class="input" id="q-phone" name="phone" type="tel"></div>
+            <div class="field"><label for="q-qty">Quantity</label><input class="input" id="q-qty" name="quantity" type="number" min="1" value="1"></div>
+            <div class="field full"><label for="q-msg">Details</label><textarea class="textarea" id="q-msg" name="message"></textarea></div>
+            <div class="full row"><button class="btn" type="submit">Request a quotation</button></div>
+            <p class="form-status full"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/three-kit.js"></script>
+<script src="assets/js/models.js"></script>
+<script src="assets/js/pages.js"></script>
+</body>
+</html>
